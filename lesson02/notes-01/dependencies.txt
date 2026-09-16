@@ -1,0 +1,5 @@
+          index.html 
+          /        \
+         s1.js   s2.js 
+            \     /
+            add.js
