@@ -587,5 +587,5 @@ By default, the user whose push triggered the workflow receives an email when
 that workflow fails. The remaining project participants only receive
 notifications if they are watching the repository. The workflow results can also
 be seen in the GitHub web interface (e.g. the [actions
-page](https://github.com/isel-leic-daw/s2627i-51d-51n/actions) of the course's
+page](https://github.com/isel-leic-daw/s2627i-53d-LF/actions) of the course's
 public repository).

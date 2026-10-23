@@ -19,5 +19,5 @@ Implement one or more components for the Spring MVC pipeline, such that:
 
 === Exercise 2
 
-Create a copy of the example `tic-tac-toe` project with the additional tests and functionality described in link:https://github.com/isel-leic-daw/s2627i-53d-LF/blob/main/00-lecture-notes/c-backend-code-organization.md#exercises[`https://github.com/isel-leic-daw/s2627i-53d-LF/blob/main/00-lecture-notes/c-backend-code-organization.md#exercises`].
+Create a copy of the example `tic-tac-toe` project with the additional tests and functionality described in link:https://github.com/isel-leic-daw/s2627i-53d/blob/main/00-lecture-notes/b-backend-code-organization.md#exercises[`https://github.com/isel-leic-daw/s2627i-53d/blob/main/00-lecture-notes/b-backend-code-organization.md#exercises`].
 
