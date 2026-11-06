@@ -1,0 +1,63 @@
+### Application HTTP Requests
+
+@baseUrl = http://localhost:8080
+
+### ControllerMsgConverter Endpoints
+
+### GET /msg-converter/path0
+### Returns: AccountDataModel converted to JSON
+GET {{baseUrl}}/msg-converter/path0
+
+### GET /msg-converter/path1
+### Returns: URI object converted to QR Code PNG image
+### Query parameters:
+### - url: String (required) - The URL to convert to QR code
+GET {{baseUrl}}/msg-converter/path1?url=https://github.com/
+
+### ControllerArgParser Endpoints
+
+### GET /path0
+### Returns: String message with query-string parameter
+### Query parameters:
+### - nr: Int (optional) - Argument parser converts String to Int
+GET {{baseUrl}}/path0?nr=17
+
+### GET /path1/{nr}
+### Returns: String message with path parameter
+### Path parameters:
+### - nr: Int (required) - Argument parser converts String to Int
+GET {{baseUrl}}/path1/17
+
+### POST /path2
+### Returns: String message with parsed StudentInputModel
+### Request body: StudentInputModel (JSON)
+### Validation: name length 0-10, year >= 1999
+POST {{baseUrl}}/path2
+Content-Type: application/json
+
+{
+  "name": "Ze Rambo",
+  "nr": 87236,
+  "year": 2019
+}
+
+### GET /path3
+### Returns: String message with client IP address
+### Custom argument resolver: ClientIpArgumentResolver
+GET {{baseUrl}}/path3
+
+### ServiceGreetings with Spring Context (Profile-based)
+
+### GET /greeting (Portuguese - Default)
+### Returns: Portuguese greeting based on active Spring profile
+### Active profile: pt (ServiceGreetingsPt is injected)
+### Set in application.properties: spring.profiles.active=pt
+GET {{baseUrl}}/greeting
+
+### GET /greeting (English)
+### Returns: English greeting based on active Spring profile
+### Active profile: en (ServiceGreetingEn is injected)
+### To test: change spring.profiles.active=en in application.properties
+### Or run with: java -jar app.jar --spring.profiles.active=en
+GET {{baseUrl}}/greeting
+
